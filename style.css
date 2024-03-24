@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 400px;
+}
+.button-wrapper {
+  position: relative; /* Added relative positioning */
+}
+.emoji-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.emoji-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+.emoji {
+  position: absolute;
+  animation: emojiAnimation 0.5s ease forwards;
+  width: 30px; /* Adjust the width of the images */
+  height: auto; /* Maintain aspect ratio */
+  left: 0;
+  right: 0;
+  top: -15px;
+  margin: 0 auto;
+}
+@keyframes emojiAnimation {
+  0% { opacity: 1; transform: translateY(-20px); } /* Adjusted initial position */
+  100% { opacity: 0; transform: translateY(-70px); } /* Adjusted final position */
+}
